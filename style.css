@@ -238,7 +238,7 @@ input:checked + .slider:before {
   color: var(--LightGrayishBlue);
 }
 
-@media (width < 375px) {
+@media (width < 550px) {
   .card__pricing {
     width: 80%;
     justify-content: normal;
