@@ -1,0 +1,280 @@
+:root {
+  --LinearGradient: hsl(236, 72%, 79%);
+  --LinearGradient2: hsl(237, 63%, 64%);
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  background-color: var(--VeryLightGrayishBlue);
+  font-family: 'Montserrat';
+  height: 100vh;
+}
+
+.svg__top {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.svg__bot {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card__pricing {
+  margin: auto;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__tittle {
+  color: var(--DarkGrayishBlue);
+}
+
+.card__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--VeryLightGrayishBlue);
+}
+
+.card__normal {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+.card__featured {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  margin: -1rem 0;
+  border-radius: 0.5rem;
+}
+
+.card__text {
+  color: var(--DarkGrayishBlue);
+  margin: 0;
+  padding: 1rem;
+  width: 80%;
+  text-align: center;
+}
+
+.card__text__featured__tittle {
+  color: white;
+  width: 80%;
+  text-align: center;
+}
+
+.card__text__featured {
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  width: 80%;
+  text-align: center;
+}
+
+.text__signal {
+  font-size: 2.5rem;
+}
+
+.text__price {
+  font-size: 3.5rem;
+}
+
+.price__hidden {
+  display: none;
+}
+
+.text__featured__tittle {
+  margin-top: 2.4rem;
+}
+
+.card__lineal {
+  border-top: 1px solid var(--GrayishBlue);
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+
+.card__lineal__featured {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.card__button {
+  width: 80%;
+  color: var(--DarkGrayishBlue);
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: var(--LinearGradient2);
+}
+
+.card__button__featured {
+  width: 80%;
+  color: white;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: var(--LinearGradient2);
+}
+
+.card__button__featured:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input + .slider {
+  background-color: var(--LinearGradient2);
+}
+
+input:checked + .slider {
+  background-color: var(--LinearGradient);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--LinearGradient);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle__container {
+  margin-bottom: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 1rem;
+}
+
+.text__tittle {
+  color: var(--LightGrayishBlue);
+}
+
+@media (width < 375px) {
+  .card__pricing {
+    width: 80%;
+    justify-content: normal;
+  }
+
+  .card__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .card__normal {
+    width: 100%;
+  }
+
+  .card__featured {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .card__tittle {
+    margin-top: 5rem;
+  }
+
+  .svg__top {
+    width: 180px;
+    position: fixed;
+  }
+
+  .svg__bot {
+    display: none;
+  }
+
+  .text__featured__tittle {
+    margin-top: 0;
+  }
+}
